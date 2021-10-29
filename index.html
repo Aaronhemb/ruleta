@@ -1,0 +1,348 @@
+<!---
+**********************************************************************************************************************************************************************
+
+                               __    _
+                          _wr""        "-q__
+                       _dP                 9m_
+                     _#P                     9#_
+                    d#@                       9#m
+                   d##                         ###
+                  J###                         ###L
+                  {###K                       J###K
+                  ]####K      ___aaa___      J####F
+              __gmM######_  w#P""   ""9#m  _d#####Mmw__
+           _g##############mZ_         __g##############m_
+         _d####M@PPPP@@M#######Mmp gm#########@@PPP9@M####m_
+       a###""          ,Z"#####@" '######"\g          ""M##m
+      J#@"             0L  "*##     ##@"  J#              *#K
+      #"               `#    "_gmwgm_~    dF               `#_
+    7F                 "#_   ]#####F   _dK                 JE
+    ]                    *m__ ##### __g@"                   F
+                            "PJ#####LP"
+                            "PJ#####LP"
+      `                       0######_                      '
+                            _0########_
+          .               _d#####^#####m__              ,
+           "*w_________am#####P"   ~9#####mw_________w*"
+               ""9@#####@M""           ""P@#####@M""
+
+
+               /*
+                ─┐
+                 ├─┬───┬─x──xxx────────┬─┬───┐
+                 └┼┘   │       x       │x├─┼┼┴┬──┐
+                  │    │    x   x      ├─┤x└┤ │┼┼│
+                  │    ├┐      x│xx    │┼┼─x│ │┼┼│
+                  └─ ┌─┼┼───────┼──────┼┼│x┌┤ │┼┼│
+               ┼x│x ─┼┼┼┼┼┼┼────┼┼┼┼┼─┼─┼│x││ │┼┼│
+                ┌┤x│x│┼┼┼┼┼│    │┼┼┼│ │ ├┘x││ │┼┼│
+                ││x├─┼┼┼┼┼┼│xxxx└┼┼┼│x│x│x┌┼┼─┼┼┼│
+               ─┼┼─┼┼┼┼┼┼┼┼┼───┐x└┼┼┼─┼─┼─┼┼┼┼┼┼┼│
+                └───┼─┼┼──┼────┴┐x└──────┼───────┴──
+                    │x││ x│xx xx├┐xxx x  │
+                    └─┼┴──┴─────┴┴───────┘
+                      │
+
+
+
+                                             xxxxxxxxxxxx
+                                                      xxx
+                                x                      xx
+                                xx               xxx xxxx
+                               xxx                      x
+                              xx  x                     x
+                             xx    xx           xxxxxxxxxx
+                            xx      xx
+                          xx          x
+                          x           xxx
+                        xx   xxxxxxxxxx x
+                       xx                 xx
+                       x                   xx
+                      x                     xx
+                    xx
+                */
+
+
+**********************************************************************************************************************************************************************
+--->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+    <head>
+        <title>Ruleta A3</title>
+
+
+
+        <link rel="stylesheet" href="main.css" type="text/css" />
+        <script type="text/javascript" src="Winwheel.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+
+
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+
+<link href="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/css/alertify.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/alertify.min.js"></script>
+
+
+
+
+
+    </head>
+    <body>
+
+        <div class="ruleta" align="center">
+
+            <!-- -->
+        <table cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <!--    <td>
+                  <div class="power_controls">
+                        <br />
+                        <br />
+                        <table class="power" cellpadding="10" cellspacing="0">
+                            <tr>
+                                <th align="center">Power</th>
+                            </tr>
+                            <tr>
+                                <td width="78" align="center" id="pw3" onClick="powerSelected(3);">High</td>
+                            </tr>
+                            <tr>
+                                <td align="center" id="pw2" onClick="powerSelected(2);">Med</td>
+                            </tr>
+                            <tr>
+                                <td align="center" id="pw1" onClick="powerSelected(1);">Low</td>
+                            </tr>
+                        </table>
+                        <br />
+                     <img id="spin_button" src="#" alt="Spin" onClick="startSpin();"  style=" margin:15px;
+            width: 56px; display: none;
+            "/>
+                        <br /><br/>  -->
+                  <!--      &nbsp;&nbsp;<a href="#" onClick="resetWheel(); return false;" style="display:none;" >Play Again</a><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   </div>-->
+
+
+                <td width="438" height="582" class="the_wheel" align="center" valign="center" alt="Spin" onClick="startSpin();"  onDblClick="resetWheel();"   >
+<!--Segmento para poder hacer mas grande la ruleta o mas pequeña-->
+
+                    <canvas id="canvas" class="canvas2" width="900" height="900" >
+
+                        <p style="{color: white}" align="center"></p>
+                    </canvas>
+                </td>
+            </tr>
+        </table>
+<button type="button" name="button" onClick="resetWheel();"></button>
+
+        <!--para poder cambiar el colo de los segmentos -->
+        <!-- <button onClick="changeColours();">Change Colours</button>-->
+        <script>
+            // configuracion para la ruleta , Segmentos que tendra la ruleta
+            var theWheel = new Winwheel({
+                'outerRadius'     : 400,        // Set outer radius so wheel fits inside the background.
+                'innerRadius'     : 75,         // Make wheel hollow so segments don't go all way to center.
+                'textFontSize'    : 24,         // Set default font size for the segments.
+                'textOrientation' : 'vertical', // Make text vertial so goes down from the outside of wheel.
+                'textAlignment'   : 'outer',    // Align text to outside of wheel.
+                'numSegments'     : 24,         // Specify number of segments.
+                'segments'        :             // Define segments including colour and text.
+                [                               // font size and test colour overridden on backrupt segments.
+                  //para los colores rgba 'rgba(200, 50, 75, 0.5)'
+                   {'fillStyle' : '#a6ffff ', 'text' : 'Kinping Social','textFontSize' : 22},
+                   {'fillStyle' : '#e0efed ', 'text' : 'The Secret Donut', 'textFontSize': 21},
+                   {'fillStyle' : '#143b81', 'text' : 'Jardin Botanico' ,'textFontSize': 21, 'textFillStyle' : '#ffffff'},
+                   {'fillStyle' : '#12667c', 'text' : 'Monumento a la Revolucion' ,'textFontSize': 14, 'textFillStyle' : '#ffffff'},
+                   {'fillStyle' : '#159782', 'text' : 'Rock Solid' ,'textFontSize': 30},
+                   {'fillStyle' : '#5e2944', 'text' : 'Jupiter Cerveceria', 'textFontSize' : 18, 'textFillStyle' : '#ffffff'},
+                   {'fillStyle' : '#7e3651', 'text' : 'Museo del Perfume' ,'textFontSize': 19},
+                   {'fillStyle' : '#b14f66', 'text' : 'Museo Soumaya', 'textFontSize': 22},
+                   {'fillStyle' : '#f87380', 'text' : 'V Motel Boutique' ,'textFontSize': 21},
+                   {'fillStyle' : '#ffa89f', 'text' : 'Museo del Pulque', 'textFontSize': 21},
+                   {'fillStyle' : '#ff98f5', 'text' : 'Galeria Ethra', 'textFontSize': 23},
+                   {'fillStyle' : '#ff80bd', 'text' : 'Desierto de los leones' ,'textFontSize': 15},
+                   {'fillStyle' : '#ffd56c', 'text' : 'Centro de Artes vivas', 'textFontSize': 16},
+                   {'fillStyle' : '#fffb9d', 'text' : 'Coffee Masters', 'textFontSize': 22},
+                   {'fillStyle' : '#a9fff6', 'text' : 'Enigma Rooms', 'textFontSize': 24},
+                   {'fillStyle' : '#f7d6ed', 'text' : 'Acuario Imbursa', 'textFontSize': 22},
+                   {'fillStyle' : '#ae9fe8', 'text' : 'Imagig Park', 'textFontSize': 28},
+                   {'fillStyle' : '#646393', 'text' : 'Kataplum', 'textFontSize': 29},
+                   {'fillStyle' : '#2b2e45', 'text' : 'Ki Speed Manacar', 'textFontSize': 21, 'textFillStyle' : '#ffffff'},
+                   {'fillStyle' : '#12090b', 'text' : 'Parque Tezozomoc', 'textFontSize' : 21, 'textFillStyle' : '#ffffff'},
+                   {'fillStyle' : '#3f0b11', 'text' : 'Parque la Mexicana','textFontSize': 19, 'textFillStyle' : '#ffffff'},
+                   {'fillStyle' : '#573f58', 'text' : 'Batan Parques Ecologico','textFontSize': 14, 'textFillStyle' : '#ffffff'},
+                   {'fillStyle' : '#00afff', 'text' : 'Sky Zone', 'textFontSize': 34},
+                   {'fillStyle' : '#00ffff', 'text' : 'Flamingo Caffee', 'textFontSize' : 21}
+                ],
+                'animation' :           // Specify the animation to use.
+                {
+                    'type'     : 'spinToStop',
+                    'duration' : 8,     // Duration in seconds.
+                    'spins'    : 3,     // Default number of complete spins.
+                    'callbackFinished' : alertPrize
+                }
+            });
+
+
+// cambio de color de los segmentos con un boton
+            function changeColours()
+{
+    // Change colours as desired by accessing the segment via the segments array
+    // of the wheel object (note first array position is 1 not 0).
+    let temp = theWheel.segments[1].fillStyle;
+    theWheel.segments[1].fillStyle = theWheel.segments[2].fillStyle;
+    theWheel.segments[2].fillStyle = theWheel.segments[3].fillStyle;
+    theWheel.segments[3].fillStyle = theWheel.segments[4].fillStyle;
+    theWheel.segments[4].fillStyle = temp;
+
+    // The draw method of the wheel object must be called
+    // in order for the changes to be rendered.
+    theWheel.draw();
+}
+
+            // Vars used by the code in this page to do power controls.
+            var wheelPower    = 0;
+            var wheelSpinning = false;
+
+            // -------------------------------------------------------
+            // Function to handle the onClick on the power buttons.
+            // -------------------------------------------------------
+          //  function powerSelected(powerLevel)
+          //  {
+                // Ensure that power can't be changed while wheel is spinning.
+          //      if (wheelSpinning == false)
+          //      {
+                    // Reset all to grey incase this is not the first time the user has selected the power.
+              //      document.getElementById('pw1').className = "";
+              //      document.getElementById('pw2').className = "";
+              //      document.getElementById('pw3').className = "";
+
+                    // Now light up all cells below-and-including the one selected by changing the class.
+              //      if (powerLevel >= 1)
+//{
+              //          document.getElementById('pw1').className = "pw1";
+              //      }
+
+                //    if (powerLevel >= 2)
+                //    {
+                //        document.getElementById('pw2').className = "pw2";
+                  //  }
+
+                  //  if (powerLevel >= 3)
+                  //  {
+                  //      document.getElementById('pw3').className = "pw3";
+                //    }
+
+                    // Set wheelPower var used when spin button is clicked.
+//                  wheelPower = powerLevel;
+
+                    // Light up the spin button by changing it's source image and adding a clickable class to it.
+//                  document.getElementById('spin_button').src = "bot_on.png";
+                  //  document.getElementById('spin_button').className = "clickable";
+              //  }
+          //  }
+
+            // -------------------------------------------------------
+            // Click handler for spin button.
+            // -------------------------------------------------------
+            function startSpin()
+            {
+                // Ensure that spinning can't be clicked again while already running.
+                if (wheelSpinning == false)
+                {
+                    // Based on the power level selected adjust the number of spins for the wheel, the more times is has
+                    // to rotate with the duration of the animation the quicker the wheel spins.
+                    if (wheelPower == 1)
+                    {
+                        theWheel.animation.spins = 3;
+                    }
+
+
+                    // Disable the spin button so can't click again while wheel is spinning.
+            //        document.getElementById('spin_button').src       = "bot_off.png";
+            //        document.getElementById('spin_button').className = "";
+
+                    // Begin the spin animation by calling startAnimation on the wheel object.
+                    theWheel.startAnimation();
+
+                    // Set to true so that power can't be changed and spin button re-enabled during
+                    // the current animation. The user will have to reset before spinning again.
+                    wheelSpinning = true;
+                }
+            }
+            // -------------------------------------------------------
+            // Function for reset button.
+            // -------------------------------------------------------
+            function resetWheel()
+            {
+                theWheel.stopAnimation(false);  // Stop the animation, false as param so does not call callback function.
+                theWheel.rotationAngle = 0;     // Re-set the wheel angle to 0 degrees.
+                theWheel.draw();                // Call draw to render changes to the wheel.
+
+              //  document.getElementById('pw1').className = "";  // Remove all colours from the power level indicators.
+              //  document.getElementById('pw2').className = "";
+              //  document.getElementById('pw3').className = "";
+
+                wheelSpinning = false;          // Reset to false to power buttons and spin can be clicked again.
+            }
+
+            // -------------------------------------------------------
+            // Called when the spin animation has finished by the callback feature of the wheel because I specified callback in the parameters.
+            // -------------------------------------------------------
+            function alertPrize(indicatedSegment)
+            {
+                // Just alert to the user what happened.
+                // In a real project probably want to do something more interesting than this with the result.
+                if (indicatedSegment.text == 'LOOSE TURN')
+                {
+                    alert('Sorry but you loose a turn.');
+                }
+                else if (indicatedSegment.text == 'BANKRUPT')
+                {
+                    alert('Oh no, you have gone BANKRUPT!');
+                }
+                else
+                {
+                    // alert("You have won " + indicatedSegment.text);
+
+
+                    alertify
+                        alertify.set('notifier','position', 'top-right');
+                        alertify.set('notifier','FontSize', 25)
+                        alertify.set('notifier','delay', 100);
+                        alertify.success(' Felicidades tendran que ir a : '  + indicatedSegment.text );
+
+                }
+;
+
+
+
+            }
+        </script>
+
+
+</div>
+<br>
+
+
+<div class="etiquetas">
+
+  <p class="giro1" align="center"> 1 Clic = Giro / 2 Clic = Reset</p> <br>
+    <p class="giro2" align="center"> Pulsar rueda = Giro / Pulsar Logo = Reset  </p><br>
+
+</div>
+
+    </body>
+
+
+
+
+
+
+</html>

@@ -1,0 +1,191 @@
+
+html{
+  margin: 0px;
+  padding: 0px;
+   min-height:100%;
+touch-action: manipulation;
+}
+
+body
+{
+    font-family: arial;
+    margin: 0px;
+    padding: 0px;
+touch-action: manipulation;
+}
+
+/* Sets the background image for the wheel */
+td.the_wheel
+{
+    background-image: url(logo7.png);
+    background-position: center;
+    background-repeat-y: no-repeat;
+
+    background-size: 21%;
+        background-position-x: 348px;
+        background-position-y: 372px;
+
+    padding-right: 35px;
+    background-repeat-x: no-repeat;
+    background-repeat: none;
+    onDblclick:resetWheel;
+}
+
+.alertify-notifier .ajs-message.ajs-success {
+  background: rgb(73 178 202 / 95%) !important;
+  font-size: 40px;
+  width: 441px !important;
+  margin-left: -150px;
+}
+
+
+
+/* Do some css reset on selected elements */
+h1, p
+{
+    margin: 0;
+}
+
+div.power_controls
+{
+    margin-right:70px;
+}
+
+div.html5_logo
+{
+    margin-left:70px;
+}
+
+/* Styles for the power selection controls */
+table.power
+{
+    background-color: #cccccc;
+    cursor: pointer;
+    border:1px solid #333333;
+}
+
+
+
+/* Style applied to the spin button once a power has been selected */
+.clickable
+{
+    cursor: pointer;
+}
+
+/* Other misc styles */
+.margin_bottom
+{
+    margin-bottom: 5px;
+}
+button {
+    /* display: inline-flex; */
+    position: fixed;
+    padding-left: 37px;
+        padding-right: 150px;
+        padding-top: 152px;
+        padding-bottom: 24px;
+        margin: -721px 131px -206px 333px !important;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    /*overflow: hidden;*/
+    outline: none;
+
+}
+
+p.giro1{
+  font-size: 50px;
+  text-align: center;
+}
+
+p.giro2{
+  font-size: 50px;
+  text-align: center;
+  display: none;
+}
+
+
+@media (max-width:  550px) {  /* For mobile phones: */
+
+
+  body {
+      display: inline-block !important;
+  }
+
+  td.the_wheel
+  {
+      background-image: url(logo7.jpg);
+      background-position: center;
+      background-repeat-y: no-repeat;
+
+      background-size: 23%;
+          background-position-x: 439px;
+          background-position-y: 723px;
+
+      padding-right: 35px;
+    /*  padding-bottom: 577px;*/
+      background-repeat-x: no-repeat;
+      background-repeat: none;
+
+
+
+}
+
+canvas#canvas {
+  width: 1290px !important;
+  height: 1251px !important;
+  margin-top: 221px !important;
+/*  margin-right: 42px !important;*/
+  margin-left: -48px !important;
+  padding-right: -27px;
+  padding-left: 0px;
+  /* padding-top: 303px; */
+  /*padding-right: -16px; */
+}
+
+
+p.giro1{
+  font-size: 50px;
+  text-align: center;
+  display: none;
+}
+
+p.giro2{
+  font-size: 50px;
+  text-align: center;
+  display: inline;
+  margin-left: 113px;
+}
+
+.alertify-notifier.ajs-right .ajs-message.ajs-visible {
+  right: 778px !important;
+    margin-top: 1662px !important;
+}
+
+
+button {
+    /* display: inline-flex; */
+    position: fixed;
+    padding-left: 37px;
+        padding-right: 150px;
+        padding-top: 152px;
+        padding-bottom: 24px;
+    margin: -729px -341px -213px -141px !important;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    /*overflow: hidden;*/
+    outline: none;
+
+}
+
+.alertify-notifier .ajs-message.ajs-success {
+    background: rgb(73 178 202 / 95%) !important;
+    font-size: 61px;
+    width: 802px !important;
+    margin-left: -284px;
+}
+
+}
